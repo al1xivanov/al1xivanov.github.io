@@ -5,68 +5,25 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../style.css">
     <meta lang="ru">
+    <title>TEST ADS</title>
+
+    <script src="https://yandex.ru/ads/system/header-bidding.js" async></script>
+    <script>
+        window.YaHeaderBiddingSettings = {
+            biddersMap: { adfox: '359004' },
+            adUnits: [{
+                code: 'adfox_1646923591381719',
+                bids: [{ bidder: 'adfox', params: { placementId: 400339 } }]
+            }],
+            timeout: 500
+        };
+    </script>
 
     <!--В <head> сайта один раз добавьте код загрузчика-->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
-    <title>TEST ADS</title>
 
 
-    <div id="adfox_15218"></div>
-    <script>window.Ya.adfoxCode.hbCallbacks.push(function() {
-        window.Ya.headerBidding.pushAdUnits([
-            {
-                code: 'adfox_15218',
-                sizes: [[600, 200]],
-                bids: [
-                    { bidder: 'criteo', params: { placementId: 'HB Criteo Place' } }
-                ]
-            }
-        ]);
-        window.yaContextCb.push(function() {
-            window.Ya.adfoxCode.create(
-                {
-                    ownerId: 400339,
-                    containerId: 'adfox_164689705045977339',
-                    params: { p1: 'fnkv', p2: 'hntu' }
-                }
-            );
-        });
-    });
-    </script>
-    <script>
-        window.YaHeaderBiddingSettings = {
-            biddersMap: adfoxBiddersMap,
-            adUnits: adUnits,
-            timeout: userTimeout,
-            callbacks: {
-                onBidsreceived: (bids) => {
-                    console.log('---> PUBLIC CALLBACK onBidsreceived: ', bids);
-                }
-            }
-        };
-    </script>
-    <!--AdFox START-->
-    <!--yandex_al1xivanov-->
-    <!--Площадка: HB AdFox Site / HB AdFox Section / HB AdFox Place-->
-    <!--Категория: <не задана>-->
-    <!--Баннер: <не задана>-->
-    <!--Тип баннера: HB AdFox Banner Type-->
-    <div id="adfox_164692273717332224"></div>
-    <script>
-        window.yaContextCb.push(()=>{
-            Ya.adfoxCode.create({
-                ownerId: 400339,
-                containerId: 'adfox_164692273717332224',
-                params: {
-                    p1: 'csxkg',
-                    p2: 'hnva',
-                    pfc: 'eavjx',
-                    pfb: 'ldxml'
-                }
-            })
-        })
-    </script>
 
 </head>
 <header>
