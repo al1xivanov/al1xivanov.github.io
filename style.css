@@ -96,5 +96,5 @@ h2.questions + div ol {
     padding: 1px;
     width: auto;
     display: block;
-
+    height: 600px;
 }
