@@ -34,7 +34,18 @@
         });
     });
     </script>
-
+    <script>
+        window.YaHeaderBiddingSettings = {
+            biddersMap: adfoxBiddersMap,
+            adUnits: adUnits,
+            timeout: userTimeout,
+            callbacks: {
+                onBidsreceived: (bids) => {
+                    console.log('---> PUBLIC CALLBACK onBidsreceived: ', bids);
+                }
+            }
+        };
+    </script>
 </head>
 <header>
     <ul class="nav">
