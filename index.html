@@ -5,10 +5,34 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../style.css">
     <meta lang="ru">
+
     <!--В <head> сайта один раз добавьте код загрузчика-->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
     <title>TEST ADS</title>
+
+    <div id="adfox_15218"></div>
+    <script>window.Ya.adfoxCode.hbCallbacks.push(function() {
+        window.Ya.headerBidding.pushAdUnits([
+            {
+                code: 'adfox_15218',
+                sizes: [[600, 200]],
+                bids: [
+                    { bidder: 'criteo', params: { placementId: 'HB Criteo Place' } }
+                ]
+            }
+        ]);
+        window.yaContextCb.push(function() {
+            window.Ya.adfoxCode.create(
+                {
+                    ownerId: 400339,
+                    containerId: 'adfox_164689705045977339',
+                    params: { p1: 'fnkv', p2: 'hntu' }
+                }
+            );
+        });
+    });
+    </script>
 
 </head>
 <header>
