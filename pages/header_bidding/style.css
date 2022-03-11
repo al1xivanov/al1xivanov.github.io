@@ -91,6 +91,14 @@ h2.questions + div ol {
         display: block;
     }
 }
+#adfox_1646923591381719{
+    display: block;
+    align-content: center;
+
+    margin: 0 auto;
+    vertical-align: middle;
+    horiz-align: center;
+}
 
 .content {
     padding: 1px;
