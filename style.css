@@ -97,4 +97,5 @@ h2.questions + div ol {
     width: auto;
     display: block;
     height: 200px;
+    /*add height */
 }
