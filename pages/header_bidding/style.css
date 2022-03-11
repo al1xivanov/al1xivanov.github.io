@@ -95,9 +95,11 @@ h2.questions + div ol {
 .content {
     padding: 1px;
     width: auto;
-    display: block;
     height: auto;
     align-content: center;
     margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+    horiz-align: center;
     /*add height */
 }
