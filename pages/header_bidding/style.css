@@ -106,7 +106,7 @@ h2.questions + div ol {
     height: auto;
     align-content: center;
     margin: 0 auto;
-    display: inline-block;
+    display: block;
     vertical-align: middle;
     horiz-align: center;
     /*add height */
