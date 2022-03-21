@@ -3,31 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../header_bidding/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta lang="ru">
     <title>TEST ADS</title>
-
-    <script src="https://yandex.ru/ads/system/header-bidding.js" async></script>
-    <script>
-        window.YaHeaderBiddingSettings = {
-            biddersMap: { adfox_yandex_lyuksADS: '1842357' },
-            adUnits: [{
-                code: 'adfox_1646923591381719',
-                bids: [{ bidder: 'adfox_yandex_lyuksADS', params: {
-                        p1: 'crylp',
-                        p2: 'hliw',
-                        pfc: 'eawex',
-                        pfb: 'ldyvs',
-
-                    } }]
-            }],
-            timeout: 500
-        };
-    </script>
-
-    <!--В <head> сайта один раз добавьте код загрузчика-->
-    <script>window.yaContextCb = window.yaContextCb || []</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
 
 
 
@@ -35,7 +13,7 @@
 <header>
     <ul class="nav">
         <li class="nav_item">
-            <a class="nav_item_link" href="../header_bidding/index.html">Главная</a>
+            <a class="nav_item_link" href="/index.html">Главная</a>
         </li>
     </ul>
 
@@ -48,26 +26,7 @@
 
         <div class="content">
 
-            <!--AdFox START-->
-            <!--yandex_al1xivanov-->
-            <!--Площадка: HB Criteo Site / * / *-->
-            <!--Тип баннера: HB Criteo Banner Template-->
-            <!--Расположение: середина страницы-->
-            <div id="adfox_164689705045977339"></div>
-            <script>
-                window.yaContextCb.push(()=>{
-                    Ya.adfoxCode.create({
-                        ownerId: 400339,
-                        containerId: 'adfox_164689705045977339',
-                        params: {
-                            pp: 'h',
-                            ps: 'fnkv',
-                            p2: 'hntu',
-                            puid1: 'Moscow' // change id
-                        }
-                    })
-                })
-            </script>
+
 
 
         </div>
@@ -77,32 +36,7 @@
             perspiciatis consequuntur quo, rerum a illo dolore ex voluptates, adipisci saepe, doloribus expedita cum!
             Obcaecati aliquid expedita eaque velit unde temporibus ipsam, nulla quis aliquam.</p>
         <div class="content">
-            <!--AdFox START-->
-            <!--yandex_al1xivanov-->
-            <!--Площадка: HB AdFox Site / HB AdFox Section / HB AdFox Place-->
-            <!--Категория: <не задана>-->
-            <!--Баннер: <не задана>-->
-            <!--Тип баннера: HB AdFox Banner Type-->
-            <div id="adfox_1646923591381719"></div>
-            <script>
-                window.yaContextCb.push(()=>{
-                    Ya.adfoxCode.create({
-                        ownerId: 400339,
-                        containerId: 'adfox_1646923591381719',
-                        params: {
-                            p1: 'csxkg',
-                            p2: 'hnva',
-                            pfc: 'eavjx',
-                            pfb: 'ldxml'
-                            puid1: 'Moscow'
-                        },
-                        lazyLoad: {
-                            fetchMargin: 100,
-                            mobileScaling: 2,
-                        }
-                    })
-                })
-            </script>
+
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae nostrum dignissimos doloremque
             suscipit, eligendi atque nulla asperiores, consectetur sit magnam esse exercitationem officiis eius maxime
@@ -129,14 +63,7 @@
             commodi accusamus nam! Nisi, officia nesciunt?</p>
 
         <div class="content">
-            <!-- Yandex.RTB R-A-1578581-4 -->
-            <div id="yandex_rtb_R-A-1578581-4"></div>
-            <script>window.yaContextCb.push(()=>{
-                Ya.Context.AdvManager.render({
-                    renderTo: 'yandex_rtb_R-A-1578581-4',
-                    blockId: 'R-A-1578581-4'
-                })
-            })</script>
+
 
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, necessitatibus! Dolore vero sapiente
@@ -270,7 +197,7 @@
 
 
 
-<script src="../header_bidding/script.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
