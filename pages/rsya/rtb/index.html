@@ -30,12 +30,18 @@
 
             <!-- Yandex.RTB R-A-1578581-1 -->
             <div id="yandex_rtb_R-A-1578581-1"></div>
-            <script>window.yaContextCb.push(()=>{
+            <script>
+                const a = window.yaContextCb.push(()=>{
                 Ya.Context.AdvManager.render({
                     renderTo: 'yandex_rtb_R-A-1578581-1',
                     blockId: 'R-A-1578581-1'
                 })
-            })</script>
+                if (a) {
+                    console.log("Done!")
+                }
+                setTimeout(, 5000)
+
+                })</script>
 
 
         </div>
