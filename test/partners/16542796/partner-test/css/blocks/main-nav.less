@@ -1,0 +1,284 @@
+.main-nav {
+  z-index: 1;
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0 @mobile-wrapper;
+  padding: 0;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color: @grey2;
+  border-bottom: 2px solid @dark-grey3;
+  z-index: 1;
+
+  @media screen and (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    background: none;
+    max-height: 40px;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 30px;
+  font-weight: 400;
+
+  & a:hover {
+    color: @dark-red;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    font-size: 18px;
+    padding-right: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    & a {
+      border-bottom: 2px solid @transparent-black;
+    }
+
+    & a:hover {
+      border-bottom-color: @transparent-red;
+    }
+  }
+}
+
+.main-nav__item:last-child {
+  margin-bottom: 0;
+}
+
+.main-nav__pop-up {
+  display: none;
+}
+
+@media screen and (min-width: @desktop-width) {
+  .main-nav__item--arrow::after {
+    content: "";
+    position: relative;
+    left: 7px;
+    top: 15px;
+    border-width: 6px 4px 0;
+    border-style: solid;
+    border-color: #8f8f9b transparent transparent;
+  }
+
+  .main-nav__pop-up {
+    position: absolute;
+    min-width: 100px;
+    min-height: 110px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    padding: 20px;
+    border: 2px solid @transparent-black;
+  }
+
+  .main-nav__item--lines-98:hover .main-nav__pop-up--lines-98,
+  .main-nav__item--strelyalki:hover .main-nav__pop-up--strelyalki,
+  .main-nav__item--zuma:hover .main-nav__pop-up--zuma {
+    display: block;
+  }
+
+  .main-nav__pop-up--lines-98 {
+    max-width: 450px;
+  }
+
+  .main-nav__pop-up--strelyalki {
+    max-width: 700px;
+  }
+
+  .main-nav__pop-up--zuma {
+    max-width: 130px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 15px;
+  right: @mobile-wrapper;
+  width: 40px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: @grey;
+
+  &:hover,
+  &:active {
+    background-color: @dark-grey;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 30px;
+  height: 1px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(@black, 30%),
+    0 16px 0 0 fade(@black, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 7px;
+    width: 27px;
+    height: 1px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@black, 30%);
+  }
+}
+
+// Кнопка бургера скрыта, если у пользователя не активен JavaScript
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__container {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 100%;
+
+  @media screen and (min-width: @desktop-width) {
+    max-width: 850px;
+    position: static;
+    max-height: 40px;
+  }
+}
+
+// Меню скрыто, пока не нажали бургер
+.main-nav--closed .main-nav__container {
+  display: none;
+
+  @media screen and (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+// При отключённом JavaScript показать меню в потоке
+.main-nav--nojs .main-nav__container {
+  display: flex;
+  position: relative;
+  top: 30px;
+}
+
+.main-nav__games-list {
+  display: grid;
+  column-gap: 25px;
+  row-gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &--lines-98 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &--strelyalki {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &--zuma {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-nav__game-item {
+  min-height: 100px;
+  width: 110px;
+  display: flex;
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+
+    &:hover,
+    &:active {
+      color: @dark-red;
+    }
+  }
+
+  &--button {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    margin-top: 25px;
+  }
+}
+
+.main-nav__button-on-games {
+  display: flex;
+  font-size: 17px;
+  border: 3px solid @black;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: translate(0, -3px);
+    transition: 0.1s ease-out;
+  }
+}
+
+.main-nav__img-item {
+  border-radius: 5px;
+  min-width: 95px;
+  max-width: 95px;
+  min-height: 95px;
+  background-color: @dark-grey2;
+}
+
+.main-nav__game-item:hover .main-nav__img-item {
+  transform: translate(-1px, -3px);
+  transition: 0.1s ease-out;
+}
+
+.main-nav__game-title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+}

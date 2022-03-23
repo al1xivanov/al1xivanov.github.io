@@ -1,0 +1,144 @@
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+[style*="--aspect-ratio"] > img {
+  height: auto;
+}
+@supports (--custom:property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+// Дополнительные стили
+
+[style*="--aspect-ratio"].full{
+  height:100vh !important;
+}
+
+[style*="--aspect-ratio"].full::before{
+  padding-bottom:0;
+}
+
+@media all and (display-mode: fullscreen) {
+  [style*="--aspect-ratio"]{
+   height:100vh !important;
+  }
+
+  [style*="--aspect-ratio"]::before{
+   padding-bottom:0;
+  }
+}
+
+html, body, iframe, div[style*="--aspect-ratio"] {
+	height: 100%;
+}
+
+// Stiles all games
+
+.aspect-ratio__iframe {
+  border: 0;
+}
+
+.aspect-ratio__arkadium {
+  --aspect-ratio: 7/4;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/8;
+  }
+}
+
+.aspect-ratio__arkanoid {
+  --aspect-ratio: 8/5;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__bubble-charms-2 {
+  --aspect-ratio: 70/39;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__bubble-charms {
+  --aspect-ratio: 8/5;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__bubble-chicky {
+  --aspect-ratio: 8/5;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__bubble-reiders {
+  --aspect-ratio: 7/4;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__bubble-shooter {
+  --aspect-ratio: 6/4;
+
+  @media screen and (max-width: 900px) {
+    --aspect-ratio: 7/3;
+  }
+
+  @media screen and (max-width: 480px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__christmas-lines {
+  --aspect-ratio: 16/9;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__lines-98-4-in-1 {
+  --aspect-ratio: 6/6;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__size-8-5 {
+  --aspect-ratio: 8/5;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}
+
+.aspect-ratio__size-7-4 {
+  --aspect-ratio: 7/4;
+
+  @media screen and (max-width: 500px) {
+    --aspect-ratio: 5/7;
+  }
+}

@@ -1,0 +1,126 @@
+.like-the-players-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 0 0 30px;
+  padding-bottom: 20px;
+}
+
+.like-the-players-list__item {
+  scroll-snap-align: start;
+  display: flex;
+  border: 1px solid rgb(182, 179, 179);
+  border-radius: 60px;
+  max-height: 52px;
+  margin-right: 20px;
+  padding: 8px;
+
+  scroll-snap-stop: always;
+
+  @media screen and (min-width: @tablet-width) {
+    scroll-snap-stop: normal;
+  }
+
+  & h3 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:active {
+      color: @dark-red;
+    }
+  }
+}
+
+
+.like-the-players-list__item--link1 {
+  min-width: 230px;
+}
+
+.like-the-players-list__item--link2 {
+  min-width: 335px;
+}
+
+.like-the-players-list__item--link3 {
+  min-width: 195px;
+}
+
+.like-the-players-list__item--link4 {
+  min-width: 160px;
+}
+
+.like-the-players-list__item--link5 {
+  min-width: 175px;
+}
+
+.like-the-players-list__item--link6 {
+  min-width: 335px;
+}
+
+.like-the-players-list__item--link7 {
+  min-width: 130px;
+}
+
+.like-the-players-list__item--link8 {
+  min-width: 208px;
+}
+
+.like-the-players-list__item--link9 {
+  min-width: 205px;
+}
+
+.like-the-players-list__item--link10 {
+  min-width: 180px;
+}
+
+.like-the-players-list__item--link11 {
+  min-width: 288px;
+}
+
+.like-the-players-list__item--link12 {
+  min-width: 195px;
+}
+
+.like-the-players-list__item--link13 {
+  min-width: 270px;
+}
+
+.like-the-players-list__item--link14 {
+  min-width: 375px;
+}
+
+.like-the-players-list__item--link15 {
+  min-width: 330px;
+}
+
+.like-the-players-list__item--link16 {
+  min-width: 360px;
+}
+
+.like-the-players-list__item--link17 {
+  min-width: 290px;
+}
+
+.like-the-players-list__item:hover .like-the-players-list__img {
+  transform: translate(0, -2px);
+  transition: 0.1s ease-out;
+  box-shadow: 2px 2px 6px 0 #cecece;
+}
+
+.like-the-players-list__img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 12px;
+}
