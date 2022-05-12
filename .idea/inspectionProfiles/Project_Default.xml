@@ -13,6 +13,7 @@
           <option value="sec-ch-ua-mobile" />
           <option value="sec-ch-ua" />
           <option value="authority" />
+          <option value="X-Yandex-API-Key" />
         </set>
       </option>
     </inspection_tool>
