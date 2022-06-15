@@ -1,0 +1,11 @@
+# curl -H 'X-Yandex-API-Key: f3598dfb-4878-4181-9bf7-ae57d1252e45' https://adfox.yandex.ru/api/v1?object=account&action=list&actionObject=position
+GET https://adfox.yandex.ru/api/v1? object=account&action=list&actionObject=campaign&actionObjectID=0
+X-Yandex-API-Key: 5b62773a-e718-445a-a6fe-38cad8b1ddec
+
+###
+
+
+
+
+###
+
